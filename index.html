@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Brothers Automobile Service | Auto Repairs & Maintenance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-['Poppins'] antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- TOP BAR (Contact & Location Info) -->
+    <div class="bg-red-600 text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot mr-1.5"></i> Santasi Roundabout, Kumasi, Ghana[cite: 1]</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-envelope mr-1.5"></i> veronicanyarko12@icloud.com[cite: 1]</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="bg-black/30 px-2.5 py-1 rounded-full font-medium text-xs">🔥 Workshop Open for Services</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-red-600/30">
+                    <i class="fa-solid fa-car-wrench"></i>
+                </div>
+                <div>
+                    <span class="block font-bold text-lg tracking-wide uppercase leading-tight text-white">The Brothers</span>
+                    <span class="block text-xs text-red-500 font-semibold tracking-wider">Automobile Service</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#home" class="text-red-500 hover:text-red-400 transition">Home</a>
+                <a href="#services" class="text-zinc-300 hover:text-red-400 transition">Services</a>
+                <a href="#about" class="text-zinc-300 hover:text-red-400 transition">Our Team</a>
+                <a href="#contact" class="text-zinc-300 hover:text-red-400 transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition shadow-lg shadow-red-600/20 active:scale-95">
+                    Book Appointment
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-zinc-300 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-red-500 font-medium">Home</a>
+            <a href="#services" class="block py-2 text-zinc-300 font-medium">Services</a>
+            <a href="#about" class="block py-2 text-zinc-300 font-medium">Our Team</a>
+            <a href="#contact" class="block py-2 text-zinc-300 font-medium">Contact</a>
+            <button onclick="openBookingModal()" class="w-full py-2.5 mt-2 rounded-xl bg-red-600 text-white font-semibold text-center">
+                Book Appointment
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-12 pb-20 overflow-hidden bg-gradient-to-b from-zinc-900 to-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Hero Left Content -->
+            <div class="space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-red-600/10 border border-red-600/30 px-3.5 py-1.5 rounded-full text-red-500 text-sm font-semibold animate-pulse">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> Auto Repairs Services
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase leading-none">
+                    The Brothers <br><span class="text-red-600 drop-shadow-md">Automobile Service</span>
+                </h1>
+                <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                    Workshop open 🧰🛠️🔧 bring your car for good maintenance & services. Expert diagnostics, body straightening, engine care, and professional upkeep right at Santasi Roundabout, Kumasi[cite: 1]!
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                    <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base transition shadow-xl shadow-red-600/30 flex items-center justify-center gap-2">
+                        <span>Book Service Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 font-semibold text-base transition text-center">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right Car Image -->
+            <div class="relative flex justify-center">
+                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-red-600 to-orange-600 opacity-30 blur-2xl"></div>
+                <div class="relative w-full max-w-lg rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl group">
+                    <!-- Clean red car graphic representation based on flyer -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1000&auto=format&fit=crop" alt="Red SUV Car" class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end">
+                        <div>
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">PRO CARE</span>
+                            <h3 class="text-white font-bold text-lg mt-1">Full Diagnostic & Repair</h3>
+                        </div>
+                        <div class="bg-black/60 backdrop-blur border border-white/10 p-2.5 rounded-xl text-red-500 flex gap-2 text-sm">
+                            <i class="fa-solid fa-toolbox"></i>
+                            <i class="fa-solid fa-wrench"></i>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IMAGE BANNER SECTION -->
+    <section class="promo-banner" aria-label="Workshop banner">
+        <div class="promo-banner__content">
+            <span class="promo-banner__tag">Trusted Auto Care</span>
+            <h2>Reliable repairs, maintenance, and bodywork for every journey.</h2>
+            <p>Drop in your banner photo here or replace the URL with your own image anytime.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-zinc-900/50 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs">What We Offer</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold uppercase">Our Professional Services</h2>
+                <p class="text-zinc-400 text-sm sm:text-base">We handle everything from minor checkups to complex automatic gearbox repairs with precision equipment.</p>
+            </div>
+
+            <!-- Service Grid (Derived directly from flyer) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Whole Car Service</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Comprehensive multi-point vehicle inspection, fluid replacements, filter checks, and full tune-ups.</p>
+                    <button onclick="openBookingModal('Whole Car Service')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Air Conditioning Specialist</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">AC gas recharging, leak detection, compressor maintenance, and complete climate control repair.</p>
+                    <button onclick="openBookingModal('Air Conditioning Specialist')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Body Straightening & Spraying</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Accident body alignment, dent removal, professional priming, and factory-finish color spraying.</p>
+                    <button onclick="openBookingModal('Body Straightening & Spraying')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Automobile Mechanic</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Engine overhauls, suspension repairs, brake system servicing, and timing belt replacements.</p>
+                    <button onclick="openBookingModal('Automobile Mechanic')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Auto Electrical & Diagnosis</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Advanced computer scanner diagnostics, wiring repairs, alternator & starter fixes, and sensor checks.</p>
+                    <button onclick="openBookingModal('Auto Electrical & Diagnosis')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-red-600/50 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-red-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Automatic Gearbox Experts</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">Automatic transmission fluid flushing, valve body repairs, clutch replacement, and gearbox overhauling.</p>
+                    <button onclick="openBookingModal('Automatic Gearbox Experts')" class="text-red-500 hover:text-red-400 text-sm font-semibold inline-flex items-center gap-1.5">
+                        Book This Service <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / TEAM SECTION (From Flyer Photo) -->
+    <section id="about" class="py-20 bg-zinc-950 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Team Image Placeholder from Flyer -->
+            <div class="relative">
+                <div class="rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1000&auto=format&fit=crop" alt="The Brothers Mechanics Team" class="w-full h-[400px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                        <div>
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">EXPERT CREW</span>
+                            <h4 class="text-white font-bold text-lg mt-1">The Brothers Team</h4>
+                        </div>
+                        <div class="text-red-500 text-sm font-semibold bg-black/60 px-3 py-1.5 rounded-lg border border-white/10">
+                            Ready to Assist
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Description -->
+            <div class="space-y-6">
+                <span class="text-red-500 font-bold uppercase tracking-widest text-xs">Meet The Specialists</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold uppercase">Skilled & Certified Mechanics</h2>
+                <p class="text-zinc-400 text-base leading-relaxed">
+                    Our team of experienced automotive professionals brings years of hands-on expertise to every repair job. Whether it's complex electronic troubleshooting or complete engine overhauls, we treat your vehicle with utmost care and precision.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl">
+                        <span class="block text-2xl font-bold text-red-500 mb-1">100%</span>
+                        <span class="text-xs text-zinc-400">Quality Workmanship</span>
+                    </div>
+                    <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl">
+                        <span class="block text-2xl font-bold text-red-500 mb-1">Fast</span>
+                        <span class="text-xs text-zinc-400">Turnaround Time</span>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="openBookingModal()" class="px-6 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-semibold text-sm transition shadow-lg shadow-red-600/20">
+                        Bring Your Car For Service
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact" class="py-20 bg-zinc-900/40 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-6">
+                    <span class="text-red-500 font-bold uppercase tracking-widest text-xs">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold uppercase">Visit Our Workshop</h2>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Bring your car for good maintenance & services. Stop by our workshop at Santasi Roundabout or reach out via email[cite: 1].
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-red-600/10 text-red-500 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Location</h4>
+                                <p class="text-zinc-400 text-sm mt-0.5">Santasi Roundabout, Kumasi, Ghana[cite: 1]</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-red-600/10 text-red-500 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Email Us</h4>
+                                <p class="text-zinc-400 text-sm mt-0.5">veronicanyarko12@icloud.com[cite: 1]</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                            <div class="w-10 h-10 rounded-lg bg-red-600/10 text-red-500 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Working Hours</h4>
+                                <p class="text-zinc-400 text-sm mt-0.5">Monday – Saturday: 8:00 AM – 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Inquiry Form -->
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Send Us a Quick Message</h3>
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Your Name</label>
+                            <input type="text" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600 transition" placeholder="e.g. Kwadwo Mensah">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Phone Number</label>
+                            <input type="tel" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600 transition" placeholder="e.g. +233 24 000 0000">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Message / Car Issue</label>
+                            <textarea rows="4" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600 transition" placeholder="Describe what service you need..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition shadow-lg shadow-red-600/20">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <div class="flex justify-center items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-sm">
+                    <i class="fa-solid fa-car-wrench"></i>
+                </div>
+                <span class="font-bold text-white uppercase tracking-wider">The Brothers Automobile Service</span>
+            </div>
+            <p>© 2026 The Brothers Automobile Service. Santasi Roundabout, Kumasi, Ghana[cite: 1]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-zinc-900 border border-zinc-800 w-full max-w-lg rounded-2xl p-6 sm:p-8 relative shadow-2xl animate-fade-in">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-2">Book Service Appointment</h3>
+            <p class="text-zinc-400 text-sm mb-6">Fill in your details and we'll have our bay ready for you.</p>
+            
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Full Name</label>
+                    <input type="text" id="book-name" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Phone Number</label>
+                    <input type="tel" id="book-phone" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Select Service</label>
+                    <select id="book-service" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600">
+                        <option>Whole Car Service</option>
+                        <option>Air Conditioning Specialist</option>
+                        <option>Body Straightening & Spraying</option>
+                        <option>Automobile Mechanic</option>
+                        <option>Auto Electrical & Diagnosis</option>
+                        <option>Automatic Gearbox Experts</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-zinc-400 mb-2">Preferred Date</label>
+                    <input type="date" id="book-date" required class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600">
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition shadow-lg shadow-red-600/20 mt-2">
+                    Confirm Appointment Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/233591239746?text=Hello%20The%20Brothers%20Automobile%20Service%2C%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-40 bg-green-500 hover:bg-green-400 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition hover:scale-105">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/233591239746?text=Hello%20The%20Brothers%20Automobile%20Service%2C%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-40 bg-green-500 hover:bg-green-400 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition hover:scale-105">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Custom JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
